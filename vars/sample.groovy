@@ -3,7 +3,7 @@ Boolean isProgrammer = true;
 String[] singers = ["Bob","Tom","Jeff","Roy"]
 
 if (isProgrammer){
-  println "He is a Programmer
+  println "He is a Programmer"
 }
 else {
   println "He is not a programmer"
