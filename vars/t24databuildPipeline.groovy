@@ -31,11 +31,5 @@ pipeline {
 				}
 			}
 		}
-		stage ('Scm Checkout') {
-			steps {
-				git branch: 'main', url: 'https://github.com/kakedari/customer.git'
-			}
-		}
 	}
-    }
 }
