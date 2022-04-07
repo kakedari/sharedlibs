@@ -1,13 +1,13 @@
 #!/usr/bin/env groovy
-/**
+
 def loadValuesYaml (Map buildParam) {
 	def config = readYaml (file:"$(buildParam?.configPath)")
-	return config:
+	return config;
 }
-**/
+
 def call (Map buildParam) {
 	def agentBox;
-	def config:
+	def config;
 
 	agentBox = "${buildParam? .node }"
 		if (agentBox='null') {
