@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-
+/**
 def loadValuesYaml (Map buildParam) {
 	def config = readYaml (file:"$(buildParam?.configPath)")
 	return config;
@@ -38,3 +38,15 @@ pipeline {
 		}
 	}
  }
+**/
+
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
+    }
+}
