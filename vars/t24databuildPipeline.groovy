@@ -24,16 +24,16 @@ pipeline {
 		timeout time:20, unit: 'MINUTES'
 	}                
 	stages {
+		stage ('Hello') {
+			steps {
+				echo "Hello World"
+			}
+		}
 		stage ('Initialize & Load Variables') {
 			steps {
 				script{
 					config = loadValuesYaml(buildParam)
 				}
-			}
-		}
-		stage ('Hello') {
-			steps {
-				echo "Hello World"
 			}
 		}
 	}
