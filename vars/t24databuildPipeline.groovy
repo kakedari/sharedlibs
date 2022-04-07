@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
-/**
+
 def loadValuesYaml (Map buildParam) {
-	def config = readYaml (file:"$(buildParam?.configPath)")
+	def config = readYaml (file:"${buildParam?.configPath}")
 	return config;
 }
 
@@ -9,9 +9,9 @@ def call (Map buildParam) {
 	def agentBox;
 	def config;
 
-	agentBox = "${buildParam? .node }"
-		if (agentBox='null') {
-			agentBox = "master'
+	agentBox = "${buildParam?.node}"
+		if (agentBox =='null') {
+			agentBox = 'master'
 		}
 	print "Started Executing from node" + agentBox
 
@@ -27,7 +27,7 @@ pipeline {
 		stage ('Initialize & Load Variables') {
 			steps {
 				script{
-					config = loadValuesYaml (buildParam)
+					config = loadValuesYaml(buildParam)
 				}
 			}
 		}
@@ -38,8 +38,8 @@ pipeline {
 		}
 	}
  }
-**/
 
+/**
 pipeline {
     agent any
     stages {
@@ -50,3 +50,4 @@ pipeline {
         }
     }
 }
+**/
