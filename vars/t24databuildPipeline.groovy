@@ -20,7 +20,7 @@ pipeline {
 	agent { node { label "${agentBox}" }}
 
 	options {
-		buildDiscarder(logRotator(artifactDaysToKeepstr: '',artifactNumToKeepStr: '', daysToKeepStr: '10', numToKeepStr: '10')
+		buildDiscarder(logRotator(artifactDaysToKeepstr: '',artifactNumToKeepStr: '', daysToKeepStr: '10', numToKeepStr: '10'))
 		timeout time:20, unit: 'MINUTES'
 	}                
 	stages {
