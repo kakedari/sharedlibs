@@ -36,6 +36,16 @@ pipeline {
 				}
 			}
 		}
+		stage('Git Token') {
+			environment {
+				Git_token = credentials ('JENKINS-GIT-TOKEN')
+			}
+			steps {
+				// bat "echo 'This is my first GIT TOKEN ${Git_token}'"
+                		bat "echo 'This is my Git Username %Git_token_USR%'"
+                		bat "echo 'This is my Git Password %Git_token_PSW%'"
+			}
+		}
 	}
    }
 }
