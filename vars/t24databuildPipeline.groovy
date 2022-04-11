@@ -36,6 +36,7 @@ pipeline {
 				}
 			}
 		}
+		/**
 		stage('Git Token') {
 			environment {
 				Git_token = credentials ('JENKINS-GIT-TOKEN')
@@ -46,6 +47,6 @@ pipeline {
                 		bat "echo 'This is my Git Password %Git_token_PSW%'"
 			}
 		}
-	}
+	}**/
    }
 }
