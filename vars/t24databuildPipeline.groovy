@@ -46,7 +46,7 @@ pipeline {
                 		bat "echo 'This is my Git Username %Git_token_USR%'"
                 		bat "echo 'This is my Git Password %Git_token_PSW%'"
 			}
-		}
-	}**/
+		}**/
+	}
    }
 }
