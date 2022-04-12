@@ -33,8 +33,9 @@ pipeline {
 			steps {
 				script{
 					config = loadValuesYaml(buildParam)
-					bat "echo 'This is my application name ${config.applicationName}'"
-					bat "echo 'This is my artifactId ${config.artifactId}'"
+					bat "echo 'Initialized and load variables successfully'"
+					//bat "echo 'This is my application name ${config.applicationName}'"
+					//bat "echo 'This is my artifactId ${config.artifactId}'"
 				}
 			}
 		}
@@ -45,7 +46,7 @@ pipeline {
 			}
 			steps {
 				// bat "echo 'This is my first GIT TOKEN ${Git_token}'"
-                		bat "echo 'This is my Git Username %Git_token_USR%'"
+                		//bat "echo 'This is my Git Username %Git_token_USR%'"
                 		bat "echo 'This is my Git Password %Git_token_PSW%'"
 			}
 		}**/
