@@ -33,7 +33,7 @@ pipeline {
 			steps {
 				script{
 					config = loadValuesYaml(buildParam)
-					bat "echo 'This is my application name ${config.appName}'"
+					bat "echo 'This is my application name ${config.applicationName}'"
 					bat "echo 'This is my artifactId ${config.artifactId}'"
 				}
 			}
