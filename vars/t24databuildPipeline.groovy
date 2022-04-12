@@ -13,7 +13,7 @@ def call (Map buildParam) {
 		if (agentBox =='null') {
 			agentBox = 'master'
 		}
-	print "Started Executing from node" + agentBox
+	print "Started Executing from node " + agentBox
 
 pipeline {
 	
@@ -34,7 +34,7 @@ pipeline {
 				script{
 					config = loadValuesYaml(buildParam)
 					bat "echo 'Initialized and load variables successfully'"
-					bat "echo 'This is my application name %config.appName%'"
+					bat "echo 'This is my application name ${%config.appName%}'"
 					bat "echo 'This is my artifactId '+ %config.artifactId%"
 				}
 			}
