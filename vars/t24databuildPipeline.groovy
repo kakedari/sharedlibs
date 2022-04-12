@@ -35,7 +35,7 @@ pipeline {
 					config = loadValuesYaml(buildParam)
 					bat "echo 'Initialized and load variables successfully'"
 					bat "echo 'This is my application name %config.appName%'"
-					bat "echo 'This is my artifactId '+ ${artifactId}"
+					bat "echo 'This is my artifactId '+ %config.artifactId%"
 				}
 			}
 		}
