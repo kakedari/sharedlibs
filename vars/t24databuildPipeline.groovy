@@ -11,8 +11,8 @@ def call (Map buildParam) {
 
 	agentBox = "${buildParam?.node}"
 		if (agentBox =='null') {
-			//agentBox = 'master'
-			agentBox = 'Built-In'
+			agentBox = 'master'
+			//agentBox = 'Built-In'
 		}
 	print "Started Executing from node " + agentBox
 
