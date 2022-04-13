@@ -11,18 +11,19 @@ def call (Map buildParam) {
 
 	agentBox = "${buildParam?.node}"
 		if (agentBox =='null') {
-			agentBox = 'Built-In Node'
+			//agentBox = 'master'
+			agentBox = 'Built-In'
 		}
 	print "Started Executing from node " + agentBox
 
 pipeline {
 	
-	/**agent { node { label "${agentBox}" }}
+	agent { node { label "${agentBox}" }}
 
 	options {
 		buildDiscarder(logRotator(artifactDaysToKeepStr: '',artifactNumToKeepStr: '', daysToKeepStr: '10', numToKeepStr: '10'))
 		timeout time:20, unit: 'MINUTES'
-	}       **/         
+	}              
 	stages {
 		stage ('Hello') {
 			steps {
