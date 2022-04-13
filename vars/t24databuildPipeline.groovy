@@ -17,12 +17,12 @@ def call (Map buildParam) {
 
 pipeline {
 	
-	//agent { node { label "${agentBox}" }}
+	/**agent { node { label "${agentBox}" }}
 
 	options {
 		buildDiscarder(logRotator(artifactDaysToKeepStr: '',artifactNumToKeepStr: '', daysToKeepStr: '10', numToKeepStr: '10'))
 		timeout time:20, unit: 'MINUTES'
-	}                
+	}       **/         
 	stages {
 		stage ('Hello') {
 			steps {
