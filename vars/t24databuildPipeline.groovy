@@ -6,26 +6,26 @@ def loadValuesYaml (Map buildParam) {
 }
 
 def call (Map buildParam) {
-	//def agentBox;
+	def agentBox;
 	def config;
-/**
+
 	agentBox = "${buildParam?.node}"
 		if (agentBox =='null') {
 			agentBox = 'master'
 			//agentBox = 'Built-In'
 		}
 	print "Started Executing from node " + agentBox
-	**/
+	
 
 pipeline {
-	/**
+	
 	agent { node { label "${agentBox}" }}
 
 	options {
 		buildDiscarder(logRotator(artifactDaysToKeepStr: '',artifactNumToKeepStr: '', daysToKeepStr: '10', numToKeepStr: '10'))
 		timeout time:20, unit: 'MINUTES'
 	}  
-	**/
+	
 	stages {
 		stage ('Hello') {
 			steps {
